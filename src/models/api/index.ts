@@ -1,5 +1,5 @@
 export enum EClientPath {
-  root = '/',
+  other = '*',
   login = '/login',
   register = '/register',
   restaurants = '/restaurants',

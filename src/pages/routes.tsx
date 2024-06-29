@@ -1,12 +1,14 @@
 import { Navigate, RouteObject } from 'react-router-dom'
+import AppLayout from '../layouts/app'
 import AuthLayout from '../layouts/auth'
 import { EClientPath } from '../models/api'
 import LoginPage from './login'
 import RegisterPage from './register'
+import RestaurantsPage from './restaurants'
 
 const routes: RouteObject[] = [
   {
-    path: EClientPath.root,
+    path: EClientPath.other,
     element: <Navigate to={EClientPath.login} replace />,
   },
   {
@@ -19,6 +21,15 @@ const routes: RouteObject[] = [
       {
         path: EClientPath.register,
         element: <RegisterPage />,
+      },
+    ],
+  },
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: EClientPath.restaurants,
+        element: <RestaurantsPage />,
       },
     ],
   },
