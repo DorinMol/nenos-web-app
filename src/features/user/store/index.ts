@@ -26,7 +26,7 @@ const createUserSlice: StateCreator<
   setUser: (user) =>
     set(
       (state) => ({
-        user: state.user,
+        user: { ...state.user, ...user },
       }),
       false,
       {

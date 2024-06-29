@@ -36,7 +36,7 @@ const createRestaurantSlice: StateCreator<
   setRestaurant: (restaurant) =>
     set(
       (state) => ({
-        restaurant: state.restaurant,
+        restaurant: { ...state.restaurant, ...restaurant },
       }),
       false,
       {

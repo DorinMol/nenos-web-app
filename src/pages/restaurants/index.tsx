@@ -1,5 +1,7 @@
+import Restaurants from '../../features/restaurant/components/restaurants'
+
 const RestaurantsPage = () => {
-  return <div>RestaurantsPage</div>
+  return <Restaurants />
 }
 
 export default RestaurantsPage

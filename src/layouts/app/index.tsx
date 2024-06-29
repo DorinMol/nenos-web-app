@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import LayoutRedirect from '../../components/layoutRedirect'
 import { EClientPath } from '../../models/api'
@@ -6,9 +6,7 @@ import { EClientPath } from '../../models/api'
 const AppLayout = () => {
   return (
     <LayoutRedirect to={EClientPath.login} needsAuth={true}>
-      <Box
-        sx={{ display: 'flex', justifyContent: 'center', minHeight: '100vh' }}
-      >
+      <Container sx={{ display: 'flex', justifyContent: 'center' }}>
         <Box
           sx={{
             display: 'flex',
@@ -19,7 +17,7 @@ const AppLayout = () => {
         >
           <Outlet />
         </Box>
-      </Box>
+      </Container>
     </LayoutRedirect>
   )
 }

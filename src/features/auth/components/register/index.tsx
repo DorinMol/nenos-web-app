@@ -89,7 +89,7 @@ function Register() {
                 fontSize: 14,
                 color: (theme) => theme.palette.primary.main,
               }}
-              onClick={() => navigate(EClientPath.register)}
+              onClick={() => navigate(EClientPath.login)}
             >
               Login
             </Button>
