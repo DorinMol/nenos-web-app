@@ -8,6 +8,7 @@ const restaurants = gql`
       id
       name
       address
+      email
       phone
       createdAt
       updatedAt

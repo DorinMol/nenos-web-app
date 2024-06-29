@@ -1,12 +1,22 @@
 import { Box, Button, Paper, Stack, Typography } from '@mui/material'
 import { useState } from 'react'
+import store from '../../../../store'
 import useDeleteRestaurant from '../../hooks/useDeleteRestaurant'
 import { TRestaurant } from '../../models'
 
-const RestaurantCard = (restaurant: TRestaurant) => {
+type TProps = {
+  restaurant: TRestaurant
+  setOpenModal: (value: boolean) => void
+}
+
+const RestaurantCard = ({ restaurant, setOpenModal }: TProps) => {
+  const setRestaurant = store((state) => state.setRestaurant)
   const { mutate: deleteRestaurant, isPending } = useDeleteRestaurant()
   const [isHovered, setIsHovered] = useState(false)
-  const handleEditRestaurant = () => {}
+  const handleEditRestaurant = () => {
+    setRestaurant(restaurant)
+    setOpenModal(true)
+  }
   const handleDeleteRestaurant = () => {
     deleteRestaurant(restaurant.id)
   }

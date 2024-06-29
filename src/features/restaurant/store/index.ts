@@ -17,6 +17,7 @@ type TRestaurant = {
 
 export type TRestaurantState = TRestaurant & {
   setRestaurant(restaurant: Partial<TRestaurantDefinition>): void
+  resetRestaurant(): void
 }
 
 export const initialRestaurantState: TRestaurantDefinition = {
@@ -33,6 +34,7 @@ const createRestaurantSlice: StateCreator<
   []
 > = (set) => ({
   restaurant: initialRestaurantState,
+  resetRestaurant: () => set({ restaurant: initialRestaurantState }),
   setRestaurant: (restaurant) =>
     set(
       (state) => ({
