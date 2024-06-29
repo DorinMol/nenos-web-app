@@ -9,7 +9,7 @@ import createUserSlice, {
   TUserState,
   initialUserState,
 } from '../features/user/store'
-import { EStoreKeys } from '../models'
+import { EStoreKeys } from '../models/store'
 
 type StoreType = TUserState & TRestaurantState & { resetStore: () => void }
 

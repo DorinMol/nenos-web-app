@@ -1,5 +1,5 @@
 import { StateCreator } from 'zustand'
-import { EStoreKeys } from '../../../models'
+import { EStoreKeys } from '../../../models/store'
 
 type TRestaurantDefinition = {
   id: number

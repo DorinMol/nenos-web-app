@@ -1,11 +1,8 @@
 import { StateCreator } from 'zustand'
-import { EStoreKeys } from '../../../models'
+import { EStoreKeys } from '../../../models/store'
 
 type TUserDefinition = {
-  id: number
-  email: string
-  createdAt?: string
-  updatedAt?: string
+  token?: string
 }
 
 type TUser = {
@@ -17,8 +14,7 @@ export type TUserState = TUser & {
 }
 
 export const initialUserState: TUserDefinition = {
-  id: 0,
-  email: '',
+  token: '',
 }
 
 const createUserSlice: StateCreator<
