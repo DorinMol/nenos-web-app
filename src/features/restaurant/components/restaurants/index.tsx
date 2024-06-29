@@ -65,7 +65,7 @@ const Restaurants = () => {
         }}
       >
         <>
-          <RestaurantModal />
+          <RestaurantModal setOpenModal={setOpenModal} />
         </>
       </Modal>
     </>

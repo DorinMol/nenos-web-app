@@ -12,7 +12,11 @@ type TFormValues = {
   phone: string
 }
 
-function RestaurantModal() {
+type TProps = {
+  setOpenModal: (value: boolean) => void
+}
+
+function RestaurantModal({ setOpenModal }: TProps) {
   const [restaurant, resetRestaurant] = store((state) => [
     state.restaurant,
     state.resetRestaurant,
@@ -39,6 +43,7 @@ function RestaurantModal() {
         } else {
           createRestaurant(values)
         }
+        setOpenModal(false)
       } catch (error) {
         console.error(error)
       } finally {
