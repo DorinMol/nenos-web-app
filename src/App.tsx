@@ -1,14 +1,14 @@
-import { CssBaseline, ThemeProvider } from '@mui/material'
-import { RouterProvider } from 'react-router-dom'
-import router from './config/router'
-import theme from './config/ui/theme'
+import Http from './config/http'
+import Router from './config/router'
+import UI from './config/ui'
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <UI>
+      <Http>
+        <Router />
+      </Http>
+    </UI>
   )
 }
 

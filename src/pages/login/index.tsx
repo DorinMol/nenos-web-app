@@ -1,5 +1,7 @@
-const SignInPage = () => {
-  return <div>SignInPage</div>
+import Login from '../../features/auth/components/login'
+
+const LoginPage = () => {
+  return <Login />
 }
 
-export default SignInPage
+export default LoginPage

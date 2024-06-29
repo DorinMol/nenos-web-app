@@ -6,7 +6,7 @@ import { EClientPath } from '../../models/api'
 function AuthLayout() {
   return (
     <LayoutRedirect to={EClientPath.restaurants} needsAuth={false}>
-      <Box sx={{ display: 'flex', height: '100vh' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', height: '100vh' }}>
         <Box
           sx={{
             display: 'flex',

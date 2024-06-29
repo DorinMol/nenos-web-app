@@ -1,6 +1,8 @@
 import { Navigate, RouteObject } from 'react-router-dom'
 import AuthLayout from '../layouts/auth'
 import { EClientPath } from '../models/api'
+import LoginPage from './login'
+import RegisterPage from './register'
 
 const routes: RouteObject[] = [
   {
@@ -9,7 +11,16 @@ const routes: RouteObject[] = [
   },
   {
     element: <AuthLayout />,
-    children: [],
+    children: [
+      {
+        path: EClientPath.login,
+        element: <LoginPage />,
+      },
+      {
+        path: EClientPath.register,
+        element: <RegisterPage />,
+      },
+    ],
   },
 ]
 
